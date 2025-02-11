@@ -409,7 +409,7 @@ article .icon {
 .carousel-container {
     position: relative;
     width: 90%;
-    height: 90%;  /* This matches your original project image height */
+    height: 90%;
     margin: 0 auto;
     border-radius: 2rem;
     overflow: hidden;
@@ -424,7 +424,7 @@ article .icon {
 .carousel-slides img {
     flex: 0 0 100%;
     width: 100%;
-    height: 100%;  /* Explicit height matching original */
+    height: 100%;
     object-fit: cover;
     border-radius: 2rem;
 }

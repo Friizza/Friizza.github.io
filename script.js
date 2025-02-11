@@ -15,7 +15,6 @@ function initCarousels() {
         
         let currentSlide = 0;
         
-        // Create dots
         images.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -46,7 +45,6 @@ function initCarousels() {
             goToSlide(currentSlide);
         });
 
-        // Add touch support
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -60,15 +58,13 @@ function initCarousels() {
         });
 
         function handleSwipe() {
-            const swipeThreshold = 50; // minimum distance for a swipe
+            const swipeThreshold = 50;
             const diff = touchStartX - touchEndX;
 
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
-                    // Swipe left
                     currentSlide = (currentSlide + 1) % images.length;
                 } else {
-                    // Swipe right
                     currentSlide = (currentSlide - 1 + images.length) % images.length;
                 }
                 goToSlide(currentSlide);
@@ -77,5 +73,4 @@ function initCarousels() {
     });
 }
 
-// Initialize carousels when the page loads
 document.addEventListener('DOMContentLoaded', initCarousels);
